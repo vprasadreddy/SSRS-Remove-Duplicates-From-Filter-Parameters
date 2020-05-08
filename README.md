@@ -1,6 +1,7 @@
 # SSRS-Remove-Duplicates-From-Filter-Parameters
 Code to remove duplicates from filter parameters in SSRS Reports
 
+```
 Public Shared Function RemoveDuplicates(parameter As Parameter) As String()
 Dim items As Object() = parameter.Value
 System.Array.Sort(items)
@@ -16,3 +17,4 @@ Dim unique As [String]() = New [String](k - 1) {}
 System.Array.Copy(items, 0, unique, 0, k)
 Return unique
 End Function
+```
